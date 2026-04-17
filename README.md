@@ -4,6 +4,9 @@ Ferramenta desktop desenvolvida em **PowerShell + Windows Forms** para centraliz
 a gestão de usuários e permissões no **Active Directory**, eliminando processos manuais
 dispersos no suporte técnico.
 
+> Desenvolvido com **PowerShell Studio 2022** — IDE profissional para criação de interfaces
+> gráficas em PowerShell que permite projetar formulários visualmente e gerar executáveis `.exe`.
+
 ---
 
 ## 📋 Visão Geral
@@ -65,7 +68,8 @@ para rastreabilidade completa de cada ação.
 
 | Camada | Tecnologia |
 |--------|-----------|
-| Interface | PowerShell + Windows Forms (PowerShell Studio) |
+| IDE de Desenvolvimento | **PowerShell Studio 2022** (SAPIEN Technologies) |
+| Interface | PowerShell + Windows Forms |
 | Diretório | Active Directory (`ActiveDirectory` module) |
 | Automação Nuvem | Python · `gspread` · `oauth2client` |
 | Infraestrutura | Windows Server · Remote Desktop Services (RDS) |
@@ -91,7 +95,7 @@ para rastreabilidade completa de cada ação.
 ## 🚀 Como Executar
 
 1. Clone ou copie os arquivos para `C:\script\LiberaPermissaoPreenchimento\`
-2. Abra o arquivo `.psf` no **PowerShell Studio** ou execute o script principal
+2. Abra o arquivo `.psf` no **PowerShell Studio 2022** ou execute o script principal
 3. A interface carregará automaticamente os usuários, grupos e OUs do AD
 4. Nas configurações, ajuste o arquivo `ConfigOUs.txt` com as OUs do seu ambiente
 
@@ -108,6 +112,20 @@ para rastreabilidade completa de cada ação.
 
 ---
 
+## 🔓 Código Aberto para Customização
+
+O código deste projeto é **totalmente aberto para modificação**. Sinta-se à vontade para:
+
+- Adaptar as OUs, grupos e nomenclaturas ao seu ambiente AD
+- Adicionar ou remover funcionalidades conforme sua necessidade
+- Integrar com outros sistemas ou planilhas
+- Usar como base para construir sua própria ferramenta de gestão
+
+Basta abrir o arquivo `.psf` no **PowerShell Studio 2022** para visualizar, editar e recompilar
+toda a interface e lógica do projeto.
+
+---
+
 ## 📝 Licença
 
-Uso interno. Desenvolvido para automação de suporte técnico em ambientes Windows Server / AD.
+Este projeto é de uso livre. Pode ser copiado, modificado e redistribuído sem restrições.
