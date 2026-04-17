@@ -83,7 +83,7 @@ para rastreabilidade completa de cada ação.
 - Windows Server com módulo **Active Directory** disponível
 - PowerShell 5.1+
 - Python 3.x com `pip` (para integração com Google Sheets)
-- Arquivo de credenciais Google (`_GoogleAutenticacao_NAOMEXA.json`) em `C:\script\LiberaPermissaoPreenchimento\`
+- Arquivo de credenciais Google (`_GoogleAutenticacao.json`) em `C:\script\LiberaPermissaoPreenchimento\`
 - Arquivos de configuração:
   - `ConfigOUs.txt` — caminhos das OUs no AD
   - `Responsaveis.txt` — lista de responsáveis do setor
@@ -103,12 +103,56 @@ para rastreabilidade completa de cada ação.
 
 ## 📸 Interface
 
-> A ferramenta é organizada em **abas temáticas**:
->
-> - **Liberar Permissão** — concessão temporária de acesso a servidores
-> - **Gerenciar Usuários** — senhas, bloqueios, ativação e status de contas
-> - **Grupos / TS App** — gestão de membros em grupos de aplicações
-> - **Transferência de Arquivos** — gerenciamento de sessões e usuários por servidor
+A ferramenta é organizada em **7 abas temáticas**:
+
+---
+
+### Libera — Concessão de acesso temporário a servidores
+Selecione o usuário, o servidor (grupo AD) e o prazo. Preencha cliente, motivo e classificação antes de confirmar.
+
+![Aba Libera](images/aba_libera.png)
+
+---
+
+### Permissões — Acessos ativos e remoção
+Exibe todos os acessos vigentes com usuário, grupo, data de liberação e dia limite. Permite revogar permissões com um clique.
+
+![Aba Permissões](images/aba_permissao.png)
+
+---
+
+### Senha — Gestão de contas de usuário
+Busca usuários por OU, mostra status, último logon e empresa. Oferece reset por senha padrão, manual, aleatória ou igual ao username, com opção de fixar a senha.
+
+![Aba Senha](images/aba_senha.png)
+
+---
+
+### TsAPPs — Grupos de aplicações
+Adiciona ou remove usuários em grupos de acesso a aplicações. Suporta seleção múltipla de usuários e grupos simultâneos.
+
+![Aba TsAPPs](images/aba_tsapp.png)
+
+---
+
+### Logoff — Gerenciamento de sessões RDS
+Lista os usuários conectados por servidor. Permite derrubar sessões remotas, desativar e reativar contas em lote.
+
+![Aba Logoff](images/aba_logoff.png)
+
+---
+
+### Lote — Comandos em massa nos servidores
+Executa logoff ou comandos PowerShell arbitrários em todos os servidores do domínio simultaneamente.
+
+![Aba Lote](images/aba_lote.png)
+
+---
+
+### Arquivos/TS — Acesso remoto a servidores
+Lista servidores e partições disponíveis. Permite abrir pastas remotas diretamente e conectar via RDP (mstsc) com credenciais informadas.
+
+![Aba Arquivos/TS](images/aba_arquivosTS.png)
 
 ---
 
